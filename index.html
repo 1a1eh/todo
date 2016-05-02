@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>ToDo list</title>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+     
+    <script>
+       
+       $(document).ready(function() {
+          $('ul').on('change', function (e) {
+          	$(e.target).parent().toggleClass('gray');
+          })
+
+	        $('#button1').click(function() {
+	            var task= $('#input1').val();
+	           
+	            $('#list').append("<li><input type='checkbox' class='chbox'>"+task+"</li>");
+	        });
+       });
+          
+    </script>
+    <style type='text/css'>
+
+        * {
+          box-sizing:border-box;
+        }
+
+        @font-face {
+          font-family:'Candara';
+             src:url('/media/laleh/129CA90F9CA8EF03/Windows/Fonts.ttf') format('truetype');
+        }
+
+        html {
+          font-size: 15px;
+        }
+
+        body {
+          font-size:100%;
+          font-family:'Candara' ;
+          text-transform: capitalize;
+          background-color:#20B2AA;
+        }
+
+
+        header {
+        
+          height: 60px;
+          margin: 0 auto;
+        }
+
+        .container {
+          margin: 0 auto;
+          width: 35%;
+          background-color:white;
+          border-radius:10px;
+          padding: 30px;
+          box-shadow: 10px 10px 10px gray;
+        }
+
+        #heading2 {
+          text-align: center;
+          padding:6px;
+      
+        }
+
+
+        #list {
+          list-style:none;
+        }
+
+        #list li {
+          padding:8px 0px;
+        }
+    
+        .chbox {
+          margin-right: 14px;
+        }
+
+        #input1 {
+         margin:15px 10px;
+        }
+
+        #button1 {
+          padding:2px 30px;
+          border:none;
+          border-radius:5px;
+          background-color:#008080;
+          color:white;
+        }
+
+        .gray {
+          color:gray;
+          text-decoration:line-through;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <div class='container'>
+      <header>
+        <h2 id='heading2'>esfand</h2>
+      </header>
+   
+    
+    <main>
+      
+        <ul id='list'>
+          <li><input type='checkbox' class='chbox'>lebas</li>
+          <li><input type='checkbox' class='chbox'>kafsh</li>
+          <li><input type='checkbox' class='chbox'>ketab</li>
+          <li><input type='checkbox' class='chbox'>kif</li>
+          <li><input type='checkbox' class='chbox'>daftar</li>
+        </ul>
+      
+        <input type='text' id='input1'>
+        <button id='button1'>add</button>
+     
+    </main>
+    </div>
+    
+  </body>
+</html>
